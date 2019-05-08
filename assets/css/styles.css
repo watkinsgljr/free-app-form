@@ -1,0 +1,7 @@
+
+#grid-container {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    margin-top: 5rem;
+}
