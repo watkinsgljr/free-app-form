@@ -17,67 +17,114 @@
 
 <body>
 
-
-    <div id="grid-container">
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="company_name" type="text" class="validate">
-                        <label for="company_name">Company Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="goals" type="text" class="validate">
-                        <label for="goals">What are you looking to accomplish with a website/web application</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="input-field col s12">
-                        <select multiple>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Customer Relationship Management (CRM)</option>
-                            <option value="2">Marketing/Visibility</option>
-                            <option value="3">Automation</option>
-                            <option value="3">Productivity and/or Operations</option>
-                            <option value="3">Other</option>
-                        </select>
-                        <label>What are you your goals for your web application?</label>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Textarea</label>
-                    </div>
-                </div>
+    <div class="fade-block">
+        <div class="background-pic"></div>
 
 
-            </form>
+
+
+        <div id="grid-container" class="card">
+
+            <p>
+                <h2>Free Web Application</h2>
+                <h5>Brought to you by Greg's #30AppsChallenge.</h5>
+                <br>
+                <br>
+
+                Technoloy plays a vital role for any growing business.
+
+                This summer, 2019, we will be giving away a free web application to a small to mid sized business!
+                <br>
+                <br>
+                All applications must be May 31, 2019.
+                <br>
+                Selections will be made June 3, 2019.
+
+
+
+            </p>
+
+            <!-- Modal Trigger -->
+            <button data-target="modal1" class="btn modal-trigger modal-button">Apply</button>
+
+
         </div>
-
     </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Tell Us About Your Company</h4>
+            <p>Complete the form below to be considered.</p>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="company_name" type="text" class="validate">
+                            <label for="company_name">Company Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="website" type="text" class="validate">
+                            <label for="website">Link to Website (if applicable)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">Telephone</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select multiple>
+                                <option value="" disabled selected>Select one or more</option>
+                                <option value="1">Customer Relationship Management (CRM)</option>
+                                <option value="2">Marketing/Visibility</option>
+                                <option value="3">Automation</option>
+                                <option value="3">Productivity and/or Operations</option>
+                                <option value="3">Other</option>
+                            </select>
+                            <label>What are you your goals for your web application/website?</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">In as much detail as possible, describe your proposed
+                                application.</label>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+        </div>
+    </div>
+
 
 
 

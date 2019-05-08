@@ -1,7 +1,82 @@
 
 #grid-container {
-    width: 75%;
+    width: 50%;
     margin: auto;
-    display: grid;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-top: 5rem;
+    background-color: white;
+    position: relative; 
+    border-top: 10px solid #21A06B;
+    padding: 1rem;
 }
+
+.fade-block {
+    background-color: black;
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    overflow: scroll;
+    }
+    
+    .fade-block-green {
+        background-color: #21A06B;
+        
+        width: 100vw;
+        position: absolute;
+        opacity: .85;
+    }
+    
+    .background-pic {
+        background: url("../images/background.jpg") no-repeat center;
+        background-size: cover;
+        opacity: .7;
+        height: 100%;
+        width: 100vw;
+        position: fixed;
+          
+    }
+
+    .row {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+    }
+
+    .modal-button {
+        width: 6rem;
+    }
+
+    h2 {
+        border-bottom: 3px solid #21A06B;
+        padding-bottom: 1rem;
+    }
+
+    #modal1 {
+        border-left: #21A06B 6px solid;
+    }
+
+    h4 {
+        padding-bottom: 0;
+        display: inline-block;
+    }
+
+    /* .modal-close {
+        margin: auto!important;
+    } */
+
+    .modal-footer {
+        display: flex;
+        justify-content: center; 
+        /* margin-bottom: 5rem !important;      */
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
