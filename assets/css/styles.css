@@ -80,3 +80,33 @@
         flex-direction: column;
         align-items: center;
     }
+
+
+    @media only screen and (max-width: 992px){
+    .modal {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    html 
+    {
+        line-height: 1;
+        font-size: 12px;
+    }
+
+    .row {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #grid-container {
+        width: 95%;
+        height: 60%;
+    }
+
+    font-size {
+        font-size: 12px;
+    }
+}
+
+  

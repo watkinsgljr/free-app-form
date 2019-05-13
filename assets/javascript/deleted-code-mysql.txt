@@ -1,0 +1,87 @@
+const mysql = require("mysql");
+
+const connection = mysql.createConnection({
+  host: "localhost",
+
+  // Your port; if not 3306
+  port: 3306,
+
+  // Your username
+  user: "root",
+
+  // Your password
+  password: "password",
+  database: "playlist_db"
+});
+
+connection.connect(function (err) {
+  if (err) throw err;
+  console.log("connected as id " + connection.threadId);
+
+});
+
+
+
+
+
+$(document).ready(function () {
+
+
+
+  $('select').formSelect();
+  $('.modal').modal();
+
+});
+
+
+
+
+
+
+
+
+
+$('#submit-info').on('click', function () {
+  var firstName = $('#first_name').val().trim();
+  var lastName = $('#last_name').val().trim();
+  var companyName = $('#company_name').val().trim();
+  var website = $('#website').val().trim();
+  var email = $('#email').val().trim();
+  var phone = $('#icon-telephone').val().trim();
+  var goal = $('#goal').val().trim();
+  var description = $('#textarea1').val().trim();
+
+    console.log("Inserting a new product...\n");
+    const query = connection.query(
+      "INSERT INTO products SET ?",
+      {
+        firstName: firstName,
+        lastName: lastName,
+        companyName: companyName,
+        website: website,
+        email: email,
+        phone: phone,
+        goal: goal,
+        description: description,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
+      },
+      function (err, res) {
+        console.log(res.affectedRows + " product inserted!\n");
+      }
+    );
+
+    // logs the actual query being run
+    console.log(query.sql);
+    clearForm();
+  });
+
+function clearForm() {
+  $('#first_name').val() = " ";
+  $('#last_name').val() = " ";
+  $('#company_name').val() = " ";
+  $('#website').val() = " ";
+  $('#email').val() = " ";
+  $('#icon-telephone').val() = " ";
+  $('#goal').val() = " ";
+  $('#textarea1').val() = " ";
+};
