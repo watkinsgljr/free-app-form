@@ -1,17 +1,15 @@
-require("dotenv").config();
 
-import {config} from ('./keys');
-
-// var config = {
-//   apiKey: "AIzaSyDmlxzVgqsttBne_yPiYtqXR8MK3exXRLE",
-//   authDomain: "multiplayer-rps-9647f.firebaseapp.com",
-//   databaseURL: "https://multiplayer-rps-9647f.firebaseio.com",
-//   projectId: "multiplayer-rps-9647f",
-//   storageBucket: "multiplayer-rps-9647f.appspot.com",
-//   messagingSenderId: "1062129787281"
-// };
+var config = {
+  apiKey: "AIzaSyDmlxzVgqsttBne_yPiYtqXR8MK3exXRLE",
+  authDomain: "multiplayer-rps-9647f.firebaseapp.com",
+  databaseURL: "https://multiplayer-rps-9647f.firebaseio.com",
+  projectId: "multiplayer-rps-9647f",
+  storageBucket: "multiplayer-rps-9647f.appspot.com",
+  messagingSenderId: "1062129787281"
+};
 firebase.initializeApp(config);
 var database = firebase.database();
+
 
 
 
