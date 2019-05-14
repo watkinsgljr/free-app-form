@@ -28,6 +28,9 @@ $(document).ready(function () {
 
 
   $('#submit-info').on('click', function () {
+
+
+    
     var firstName = $('#first_name').val().trim();
     var lastName = $('#last_name').val().trim();
     var companyName = $('#company_name').val().trim();
@@ -37,21 +40,25 @@ $(document).ready(function () {
     var goal = $('#goal').val().trim();
     var description = $('#textarea1').val().trim();
 
-    var newApplicant = {
-      firstName: firstName,
-      lastName: lastName,
-      companyName: companyName,
-      website: website,
-      email: email,
-      phone: phone,
-      goal: goal,
-      description: description,
+    if (firstName != " " && lastName != " " && email != " " && goal != " " && descrption != " ") {
+      var newApplicant = {
+
+        firstName: firstName,
+        lastName: lastName,
+        companyName: companyName,
+        website: website,
+        email: email,
+        phone: phone,
+        goal: goal,
+        description: description,
+      }
+  
+      database.ref().push().set(newApplicant);
+      clearForm();
+      M.toast({html: 'Success! Thank you for applying!'})
+    } else {
+      alert("Please make sure all required fields are completed.")
     }
-
-    database.ref().push().set(newApplicant);
-    clearForm();
-    M.toast({html: 'Success! Thank you for applying!'})
-
   });
 
   function clearForm() {
