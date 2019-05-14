@@ -49,20 +49,20 @@ $(document).ready(function () {
     }
 
     database.ref().push().set(newApplicant);
-    // clearForm();
+    clearForm();
 
   });
 
-  // function clearForm() {
-  //   $('#first_name').html() = " ";
-  //   $('#last_name').val() = " ";
-  //   $('#company_name').val() = " ";
-  //   $('#website').val() = " ";
-  //   $('#email').val() = " ";
-  //   $('#icon-telephone').val() = " ";
-  //   $('#goal').val() = " ";
-  //   $('#textarea1').val() = " ";
-  // };
+  function clearForm() {
+    $('#first_name').val("");
+    $('#last_name').val("");
+    $('#company_name').val("");
+    $('#website').val("");
+    $('#email').val("");
+    $('#icon-telephone').val("") ;
+    $('#goal').val("");
+    $('#textarea1').val("");
+  };
 
 });
 

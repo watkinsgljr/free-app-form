@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="./assets/css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/javascript/free-app.js"></script>
@@ -60,7 +60,7 @@
 
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4>Tell Us About Your Company</h4>
             <p>Complete the form below to be considered.</p>
@@ -69,17 +69,20 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12 m6 l6">
-                            <input id="first_name" type="text" class="validate">
+                            <input id="first_name" type="text" class="validate" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field col s12 m6 l6">
-                            <input id="last_name" type="text" class="validate">
+                            <input id="last_name" type="text" class="validate" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12 m6 l6">
-                            <input id="company_name" type="text" class="validate">
+                            <input id="company_name" type="text" class="validate" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <label for="company_name">Company Name</label>
                         </div>
                         <div class="input-field col s12 m6 l6">
@@ -89,7 +92,8 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12 m6 l6">
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <label for="email">Email</label>
                         </div>
 
@@ -99,7 +103,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div id="goal" class="input-field col s12">
+                        <div id="goal" class="input-field col s12" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <select multiple>
                                 <option value="" disabled selected>Select one or more</option>
                                 <option value="1">Customer Relationship Management (CRM)</option>
@@ -112,13 +117,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12" required>
+                            <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">In as much detail as possible, describe your proposed
                                 application.</label>
                         </div>
                     </div>
                 </form>
+
 
             </div>
 
@@ -127,8 +134,8 @@
 
 
         </div>
-        <div class="modal-footer">
-            <a href="#!" id="submit-info" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+        <div class="modal-footer btn">
+            <button href="#!" id="submit-info" class="modal-close waves-effect waves-green btn-flat">Submit</button>
         </div>
     </div>
 

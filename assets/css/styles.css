@@ -81,6 +81,10 @@
         align-items: center;
     }
 
+    #submit-info {
+        margin: auto;
+    }
+
 
     @media only screen and (max-width: 992px){
     .modal {
