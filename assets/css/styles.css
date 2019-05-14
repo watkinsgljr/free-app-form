@@ -85,6 +85,25 @@
         margin: auto;
     }
 
+    .modal-footer button {
+        background-color: #21A06B !important;
+        color: white;
+        font-weight: bold;
+    }
+
+    .modal-button {
+        background-color: #21A06B !important;
+        color: white;
+        font-weight: bold;
+    }
+
+    #toast-container {
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+ 
+      }
+
 
     @media only screen and (max-width: 992px){
     .modal {
@@ -110,6 +129,12 @@
 
     font-size {
         font-size: 12px;
+    }
+
+    .select-wrapper input.select-dropdown {
+        font-size: 1rem;
+
+        color: grey;
     }
 }
 

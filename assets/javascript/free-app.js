@@ -50,6 +50,7 @@ $(document).ready(function () {
 
     database.ref().push().set(newApplicant);
     clearForm();
+    M.toast({html: 'Success! Thank you for applying!'})
 
   });
 
