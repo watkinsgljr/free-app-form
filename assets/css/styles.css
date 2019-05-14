@@ -138,7 +138,6 @@
 
     .select-wrapper input.select-dropdown {
         font-size: 1rem;
-
         color: grey;
     }
 }
@@ -182,5 +181,11 @@
         }
 
 }
+
+@media only screen and (orientation: landscape) {
+    #grid-container {
+        overflow: auto;
+    }
+  }
 
   
