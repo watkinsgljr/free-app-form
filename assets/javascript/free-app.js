@@ -23,6 +23,8 @@ $(document).ready(function () {
 
   $('select').formSelect();
   $('.modal').modal();
+  var instance = M.Modal.getInstance($("#modal1"));
+  var valInstance = M.Modal.getInstance($("#modal2"));
 
 
 
@@ -40,7 +42,7 @@ $(document).ready(function () {
     var goal = $('#goal').val().trim();
     var description = $('#textarea1').val().trim();
 
-    if (firstName != " " && lastName != " " && email != " " && goal != " " && descrption != " ") {
+    if (firstName.length > 1 && lastName.length > 1 != " " && email.length > 1 != " " && goal.length > 1 != " " && description.length > 1 != " ") {
       var newApplicant = {
 
         firstName: firstName,
@@ -55,9 +57,9 @@ $(document).ready(function () {
   
       database.ref().push().set(newApplicant);
       clearForm();
-      M.toast({html: 'Success! Thank you for applying!'})
+      instance.open();
     } else {
-      alert("Please make sure all required fields are completed.")
+      valInstance.open();
     }
   });
 
@@ -70,10 +72,23 @@ $(document).ready(function () {
     $('#icon-telephone').val("") ;
     $('#goal').val("");
     $('#textarea1').val("");
-  };
+    };
+
+    $('#apply-now').on('click', function () {
+        toggleDivs();
+    });
 
 });
 
+
+
+function toggleDivs() {
+    $("#grid-container, #grid-container2").toggle();
+}
+
+function showthankYou() {
+
+}
 
 
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,42 +26,8 @@
     <div class="fade-block">
         <div class="background-pic"></div>
 
+        <div id="grid-container2">
 
-
-
-        <div id="grid-container" class="card">
-
-            <p>
-                <h2>Free Web Application</h2>
-                <h5>Brought to you by Greg's <span><a href="https://www.linkedin.com/in/greg-watkins-5a99b462/"
-                            target="_blank">#30AppsChallenge.</a></span></h5>
-                <br>
-                <br>
-
-                Technology plays a vital role for any growing business.
-
-                This summer, 2019, we will be giving away a free web application to a small to mid-sized business!
-                <br>
-                <br>
-                All applications must be submitted by May 31, 2019.
-                <br>
-                Selections will be made June 3, 2019.
-
-
-
-            </p>
-
-            <!-- Modal Trigger -->
-            <button data-target="modal1" class="btn modal-trigger modal-button">Apply</button>
-
-
-        </div>
-    </div>
-
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content">
             <h4>Tell Us About Your Company</h4>
             <p>Complete the form below to be considered.</p>
 
@@ -120,22 +86,80 @@
                         <div class="input-field col s12" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">In as much detail as possible, describe your proposed
-                                application.</label>
+                            <label for="textarea1">
+                                In as much detail as possible, describe your proposed
+                                application.
+                            </label>
                         </div>
                     </div>
                 </form>
 
+                <!-- Submit App Trigger -->
+                <button class="btn" id="submit-info">Apply</button>
+
+
 
             </div>
+        </div>
 
 
 
+
+        <div id="grid-container" class="card">
+
+            <p>
+                <h2>Free Web Application</h2>
+                <h5>Brought to you by Greg's <span><a href="https://www.linkedin.com/in/greg-watkins-5a99b462/"
+                            target="_blank">#30AppsChallenge.</a></span></h5>
+                <br>
+                <br>
+
+                Technology plays a vital role for any growing business.
+
+                This summer, 2019, we will be giving away a free web application to a small to mid-sized business!
+                <br>
+                <br>
+                All applications must be submitted by June 14, 2019.
+                <br>
+                Selections will be made June 15, 2019.
+
+
+
+            </p>
+
+            <!-- Application Trigger -->
+            <button class="btn" id="apply-now">Apply</button>
 
 
         </div>
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h5>
+                Thank you for your submission! If your business is selected, someone will reach out to you by June 15, 2019.
+            </h5>
+        </div>
         <div class="modal-footer btn">
             <button href="#!" id="submit-info" class="modal-close waves-effect waves-green btn-flat">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+
+            <h5>
+              Almost done but we're missing some required information. Double check to make sure all necessary fields have been completed.
+            </h5>
+
+
+
+
+
+
         </div>
     </div>
 
