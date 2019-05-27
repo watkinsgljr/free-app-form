@@ -25,14 +25,13 @@ $(document).ready(function () {
   $('.modal').modal();
   var instance = M.Modal.getInstance($("#modal1"));
   var valInstance = M.Modal.getInstance($("#modal2"));
-  // var goalInstance = M.FormSelect.getInstance($("#goal"));
 
 
 
 
   $('#submit-info').on('click', function () {
 
-    
+
     var firstName = $('#first_name').val().trim();
     var lastName = $('#last_name').val().trim();
     var companyName = $('#company_name').val().trim();
@@ -40,7 +39,6 @@ $(document).ready(function () {
     var email = $('#email').val().trim();
     var phone = $('#icon_telephone').val().trim();
     var goal = $('#selection')[0].value;
-    console.log($('#selection'));
     var description = $('#textarea1').val().trim();
 
     if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && goal != "" && description != "" && companyName.length > 1) {
@@ -55,7 +53,7 @@ $(document).ready(function () {
         goal: goal,
         description: description,
       }
-  
+
       database.ref().push().set(newApplicant);
       clearForm();
       instance.open();
@@ -72,21 +70,21 @@ $(document).ready(function () {
     $('#company_name').val("");
     $('#website').val("");
     $('#email').val("");
-    $('#icon-telephone').val("") ;
+    $('#icon-telephone').val("");
     $('#goal').val("");
     $('#textarea1').val("");
-    };
+  };
 
-    $('#apply-now').on('click', function () {
-        toggleDivs();
-    });
+  $('#apply-now').on('click', function () {
+    toggleDivs();
+  });
 
 });
 
 
 
 function toggleDivs() {
-    $("#grid-container, #grid-container2").toggle();
+  $("#grid-container, #grid-container2").toggle();
 }
 
 function showthankYou() {
