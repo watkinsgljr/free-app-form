@@ -267,7 +267,7 @@ button {
      }
 
      font-size {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     h2 {
@@ -275,8 +275,8 @@ button {
     }
     
     html {
-        line-height: 1.5;
-        font-size: 14px;
+        line-height: 1;
+        font-size: 16px;
     }
 
     #apply-now {
