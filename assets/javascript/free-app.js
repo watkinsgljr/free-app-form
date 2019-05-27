@@ -25,12 +25,12 @@ $(document).ready(function () {
   $('.modal').modal();
   var instance = M.Modal.getInstance($("#modal1"));
   var valInstance = M.Modal.getInstance($("#modal2"));
+  // var goalInstance = M.FormSelect.getInstance($("#goal"));
 
 
 
 
   $('#submit-info').on('click', function () {
-
 
     
     var firstName = $('#first_name').val().trim();
@@ -39,10 +39,11 @@ $(document).ready(function () {
     var website = $('#website').val().trim();
     var email = $('#email').val().trim();
     var phone = $('#icon_telephone').val().trim();
-    var goal = $('#goal').val().trim();
+    var goal = $('#selection')[0].value;
+    console.log($('#selection'));
     var description = $('#textarea1').val().trim();
 
-    if (firstName.length > 1 && lastName.length > 1 != " " && email.length > 1 != " " && goal.length > 1 != " " && description.length > 1 != " ") {
+    if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && goal != "" && description != "" && companyName.length > 1) {
       var newApplicant = {
 
         firstName: firstName,
@@ -58,6 +59,8 @@ $(document).ready(function () {
       database.ref().push().set(newApplicant);
       clearForm();
       instance.open();
+      toggleDivs();
+      $("#apply-now").attr("disabled", true);
     } else {
       valInstance.open();
     }

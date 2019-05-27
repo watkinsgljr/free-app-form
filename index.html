@@ -11,11 +11,7 @@
     <link href="./assets/css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/javascript/free-app.js"></script>
 
 
     <title>Free Web App</title>
@@ -37,22 +33,22 @@
                         <div class="input-field col s12 m6 l6">
                             <input id="first_name" type="text" class="validate" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <label for="first_name">First Name</label>
+                            <label for="first_name">First Name*</label>
                         </div>
                         <div class="input-field col s12 m6 l6">
                             <input id="last_name" type="text" class="validate" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <label for="last_name">Last Name</label>
+                            <label for="last_name">Last Name*</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12 m6 l6">
                             <input id="company_name" type="text" class="validate" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <label for="company_name">Company Name</label>
+                            <label for="company_name">Company Name*</label>
                         </div>
                         <div class="input-field col s12 m6 l6">
-                            <input id="website" type="text" class="validate">
+                            <input id="website" type="url" class="validate">
                             <label for="website">Link to Website (if applicable)</label>
                         </div>
                     </div>
@@ -60,7 +56,7 @@
                         <div class="input-field col s12 m6 l6">
                             <input id="email" type="email" class="validate" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <label for="email">Email</label>
+                            <label for="email">Email*</label>
                         </div>
 
                         <div class="input-field col s12 m6 l6">
@@ -71,13 +67,13 @@
                     <div class="row">
                         <div id="goal" class="input-field col s12" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <select multiple>
-                                <option value="" disabled selected>Select one or more</option>
-                                <option value="1">Customer Relationship Management (CRM)</option>
-                                <option value="2">Marketing/Visibility</option>
-                                <option value="3">Automation</option>
-                                <option value="4">Inventory Managanment and/or Operations</option>
-                                <option value="5">Other</option>
+                            <select id="selection">
+                                <option value="" disabled selected>Select one</option>
+                                <option value="crm">Customer Relationship Management (CRM)</option>
+                                <option value="marketing">Marketing/Visibility</option>
+                                <option value="automation">Automation</option>
+                                <option value="operations">Inventory Managanment and/or Operations</option>
+                                <option value="other">Other</option>
                             </select>
                             <label>What are you your goals for your web application/website?</label>
                         </div>
@@ -85,10 +81,10 @@
                     <div class="row">
                         <div class="input-field col s12" required>
                             <span class="helper-text" data-error="Required" data-success="Got it!"></span>
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="textarea1" type="text" class="materialize-textarea"></textarea>
                             <label for="textarea1">
                                 In as much detail as possible, describe your proposed
-                                application.
+                                application.*
                             </label>
                         </div>
                     </div>
@@ -136,16 +132,12 @@
 
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
+    <div id="modal1" class="modal">
         <div class="modal-content">
             <h5>
                 Thank you for your submission! If your business is selected, someone will reach out to you by June 15, 2019.
             </h5>
         </div>
-        <div class="modal-footer btn">
-            <button href="#!" id="submit-info" class="modal-close waves-effect waves-green btn-flat">Submit</button>
-        </div>
-    </div>
 
     <!-- Modal Structure -->
     <div id="modal2" class="modal">
@@ -157,9 +149,6 @@
 
 
 
-
-
-
         </div>
     </div>
 
@@ -194,7 +183,11 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/javascript/free-app.js"></script>
 
 
 
