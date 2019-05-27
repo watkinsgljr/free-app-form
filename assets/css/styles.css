@@ -308,5 +308,18 @@ button {
         
     }
 
+    @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        #grid-container {
+            width: 95%;
+            height: 80%;
+            justify-content: normal;
+        }
+   
+    }
+
 
 
