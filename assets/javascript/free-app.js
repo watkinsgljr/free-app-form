@@ -41,7 +41,7 @@ $(document).ready(function () {
     var goal = $('#selection')[0].value;
     var description = $('#textarea1').val().trim();
 
-    if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && goal != "" && description != "" && companyName.length > 1) {
+    if (firstName.length > 1 && lastName.length > 1 && email.length > 1 && description != "" && companyName.length > 1) {
       var newApplicant = {
 
         firstName: firstName,
