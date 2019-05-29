@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\javascript"
   ],
+  "SelectedNode": "\\assets\\javascript\\free-app.js",
   "PreviewInSolutionExplorer": false
 }
